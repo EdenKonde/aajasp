@@ -92,7 +92,7 @@ var _wpUtilSettings = {"ajax":{"url":"\/wordpress\/wp-admin\/admin-ajax.php"}};
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/wp-util.min.js?ver=5.7" id="wp-util-js"></script>
 <script type="text/javascript" id="user-profile-js-extra">
 /* <![CDATA[ */
-var userProfileL10n = {"user_id":"0","nonce":"11ebe16f44"};
+var userProfileL10n = {"user_id":"0","nonce":"d0b6a33ee1"};
 /* ]]> */
 </script>
 <script type="text/javascript" id="user-profile-js-translations">

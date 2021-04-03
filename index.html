@@ -29,6 +29,8 @@ img.emoji {
 	<link rel="stylesheet" id="sb_instagram_styles-css" href="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=2.9" type="text/css" media="all">
 <link rel="stylesheet" id="wp-block-library-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/dist/block-library/style.min.css?ver=5.7" type="text/css" media="all">
 <link rel="stylesheet" id="wp-block-library-theme-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/dist/block-library/theme.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="SFSIPLUSmainCss-css" href="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/css/sfsi-style.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="disable_sfsiplus-css" href="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/css/disable_sfsi.css?ver=5.7" type="text/css" media="all">
 <link rel="stylesheet" id="parent-style-css" href="https://EdenKonde.github.io/aajasp/wp-content/themes/oceanwp/style.css?ver=5.7" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="https://EdenKonde.github.io/aajasp/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.15.1" type="text/css" media="all">
 <link rel="stylesheet" id="simple-line-icons-css" href="https://EdenKonde.github.io/aajasp/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0" type="text/css" media="all">
@@ -41,7 +43,7 @@ img.emoji {
 <link rel="stylesheet" id="elementor-post-6-css" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/elementor/css/post-6.css?ver=1616878433" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-pro-css" href="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.1.1" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-global-css" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/elementor/css/global.css?ver=1616881505" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-9-css" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/elementor/css/post-9.css?ver=1616919209" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-9-css" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/elementor/css/post-9.css?ver=1617405892" type="text/css" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRed+Hat+Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRed+Hat+Text%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.7" type="text/css" media="all">
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/jquery/jquery.min.js?ver=3.5.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
@@ -54,9 +56,133 @@ img.emoji {
 <link rel="shortlink" href="https://EdenKonde.github.io/aajasp/">
 <link rel="alternate" type="application/json+oembed" href="https://EdenKonde.github.io/aajasp/wp-json/oembed/1.0/embed?url=https%3A%2F%2FEdenKonde.github.io%2Faajasp%2F">
 <link rel="alternate" type="text/xml+oembed" href="https://EdenKonde.github.io/aajasp/wp-json/oembed/1.0/embed?url=https%3A%2F%2FEdenKonde.github.io%2Faajasp%2F&#038;format=xml">
+
+	<script>
+		window.addEventListener("sfsi_plus_functions_loaded", function() {
+			var body = document.getElementsByTagName('body')[0];
+			// console.log(body);
+			body.classList.add("sfsi_plus_3.47");
+		})
+		// window.addEventListener('sfsi_plus_functions_loaded',function(e) {
+		// 	jQuery("body").addClass("sfsi_plus_3.47")
+		// });
+		jQuery(document).ready(function(e) {
+			jQuery("body").addClass("sfsi_plus_3.47")
+		});
+
+		function sfsi_plus_processfurther(ref) {
+			var feed_id = '';
+			var feedtype = 8;
+			var email = jQuery(ref).find('input[name="email"]').val();
+			var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if ((email != "Enter your email") && (filter.test(email))) {
+				if (feedtype == "8") {
+					var url = "https://api.follow.it/subscription-form/" + feed_id + "/" + feedtype;
+					window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+					return true;
+				}
+			} else {
+				alert("Please enter email address");
+				jQuery(ref).find('input[name="email"]').focus();
+				return false;
+			}
+		}
+	</script>
+	<style>.sfsi_plus_subscribe_Popinner {
+			width: 100% !important;
+			height: auto !important;
+			border: 1px solid #b5b5b5 !important;
+			padding: 18px 0px !important;
+			background-color: #f5f500 !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner form {
+			margin: 0 20px !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner h5 {
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-weight: bold !important;
+			color: #000000 !important;
+			font-size: 16px !important;
+			text-align: center !important;
+			margin: 0 0 10px !important;
+			padding: 0 !important;
+		}
+
+		.sfsi_plus_subscription_form_field {
+			margin: 5px 0 !important;
+			width: 100% !important;
+			display: inline-flex;
+			display: -webkit-inline-flex;
+		}
+
+		.sfsi_plus_subscription_form_field input {
+			width: 100% !important;
+			padding: 10px 0px !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=email] {
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-style: normal !important;
+			color:  !important;
+			font-size: 14px !important;
+			text-align: center !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-style: normal !important;
+			color:  !important;
+			font-size: 14px !important;
+			text-align: center !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=email]:-moz-placeholder {
+			/* Firefox 18- */
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-style: normal !important;
+			color:  !important;
+			font-size: 14px !important;
+			text-align: center !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=email]::-moz-placeholder {
+			/* Firefox 19+ */
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-style: normal !important;
+			color:  !important;
+			font-size: 14px !important;
+			text-align: center !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=email]:-ms-input-placeholder {
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-style: normal !important;
+			color:  !important;
+			font-size: 14px !important;
+			text-align: center !important;
+		}
+
+		.sfsi_plus_subscribe_Popinner input[type=submit] {
+			font-family: Helvetica,Arial,sans-serif !important;
+
+			font-weight: bold !important;
+			color: #000000 !important;
+			font-size: 16px !important;
+			text-align: center !important;
+			background-color: #dedede !important;
+		}</style>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 <!-- OceanWP CSS -->
-<style type="text/css">/* Header CSS */#site-header,.has-transparent-header .is-sticky #site-header,.has-vh-transparent .is-sticky #site-header.vertical-header,#searchform-header-replace{background-color:#292929}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#f5f500}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#f5f500}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #f5f500,-10px 0 #f5f500}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#292929}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#292929}#site-navigation-wrap .dropdown-menu >.current-menu-item >a,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >a:hover,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a:hover{color:#292929}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{border-color:rgba(245,245,0,0)}.dropdown-menu ul li a.menu-link:hover{color:#f5f500}.dropdown-menu ul >.current-menu-item >a.menu-link{color:#292929}/* Footer Bottom CSS */#footer-bottom{background-color:#292929}#footer-bottom,#footer-bottom p{color:#fff}#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover{color:#f5f500}</style>
+<style type="text/css">/* Header CSS */#site-header,.has-transparent-header .is-sticky #site-header,.has-vh-transparent .is-sticky #site-header.vertical-header,#searchform-header-replace{background-color:#292929}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:50px}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:80px}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#f5f500}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#f5f500}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #f5f500,-10px 0 #f5f500}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#292929}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#292929}#site-navigation-wrap .dropdown-menu >.current-menu-item >a,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >a:hover,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a:hover{color:#292929}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{border-color:rgba(245,245,0,0)}.dropdown-menu ul li a.menu-link:hover{color:#f5f500}.dropdown-menu ul >.current-menu-item >a.menu-link{color:#292929}/* Footer Bottom CSS */#footer-bottom{background-color:#292929}#footer-bottom,#footer-bottom p{color:#fff}#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover{color:#f5f500}</style>
 </head>
 
 <body class="home page-template page-template-elementor_header_footer page page-id-9 wp-custom-logo wp-embed-responsive oceanwp-theme dropdown-mobile no-header-border default-breakpoint has-sidebar content-right-sidebar page-header-disabled has-breadcrumbs elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-9" itemscope="itemscope" itemtype="https://schema.org/WebPage">
@@ -93,7 +219,7 @@ img.emoji {
 
 						<div data-elementor-type="wp-page" data-elementor-id="9" class="elementor elementor-9" data-elementor-settings="[]">
 							<div class="elementor-section-wrap">
-							<section class="elementor-section elementor-top-section elementor-element elementor-element-915a4cf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="915a4cf" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-915a4cf elementor-section-full_width elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="915a4cf" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ae0bcbd" data-id="ae0bcbd" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -101,7 +227,7 @@ img.emoji {
 				<div class="elementor-widget-container">
 					<div class="elementor-image">
 											<a href="https://EdenKonde.github.io/aajasp">
-							<img width="150" height="50" src="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/aaja.png" class="attachment-full size-full" alt="" loading="lazy">								</a>
+							<img width="1280" height="1280" src="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/04/aaja.png" class="attachment-full size-full" alt="" loading="lazy">								</a>
 											</div>
 				</div>
 				</div>
@@ -109,13 +235,14 @@ img.emoji {
 		</div>
 				<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-23abe43" data-id="23abe43" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-42cb5cc elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu--indicator-classic elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="42cb5cc" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+								<div class="elementor-element elementor-element-42cb5cc elementor-nav-menu--dropdown-none elementor-nav-menu__align-right elementor-nav-menu--indicator-classic elementor-widget elementor-widget-nav-menu" data-id="42cb5cc" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;}" data-widget_type="nav-menu.default">
 				<div class="elementor-widget-container">
 						<nav role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow"><ul id="menu-1-42cb5cc" class="elementor-nav-menu">
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12"><a href="https://EdenKonde.github.io/aajasp/" aria-current="page" class="elementor-item elementor-item-active">Início</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-15"><a href="https://EdenKonde.github.io/aajasp/#quemsomos" aria-current="page" class="elementor-item elementor-item-anchor">Quem Somos</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16"><a href="https://EdenKonde.github.io/aajasp/#atividades" aria-current="page" class="elementor-item elementor-item-anchor">Atividades</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18"><a href="https://EdenKonde.github.io/aajasp/#contato" aria-current="page" class="elementor-item elementor-item-anchor">Contato</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="https://forms.gle/n1kJq93JU4oBzM11A" class="elementor-item">Cadastro</a></li>
 </ul></nav>
 					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
 			<i class="eicon-menu-bar" aria-hidden="true"></i>
@@ -126,6 +253,7 @@ img.emoji {
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-15"><a href="https://EdenKonde.github.io/aajasp/#quemsomos" aria-current="page" class="elementor-item elementor-item-anchor">Quem Somos</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16"><a href="https://EdenKonde.github.io/aajasp/#atividades" aria-current="page" class="elementor-item elementor-item-anchor">Atividades</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18"><a href="https://EdenKonde.github.io/aajasp/#contato" aria-current="page" class="elementor-item elementor-item-anchor">Contato</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="https://forms.gle/n1kJq93JU4oBzM11A" class="elementor-item">Cadastro</a></li>
 </ul></nav>
 				</div>
 				</div>
@@ -133,8 +261,50 @@ img.emoji {
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-5350380 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5350380" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/orIYnt3OLdw&quot;,&quot;background_video_end&quot;:4}">
-								<div class="elementor-background-video-container elementor-hidden-phone">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a3b58be elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-section-height-default elementor-section-height-default" data-id="a3b58be" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-97d1e5d" data-id="97d1e5d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e0e99fa elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="e0e99fa" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://EdenKonde.github.io/aajasp">
+							<img width="1280" height="1280" src="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/04/aaja.png" class="attachment-full size-full" alt="" loading="lazy">								</a>
+											</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-84ac7e1" data-id="84ac7e1" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1024fa0 elementor-nav-menu__align-left elementor-nav-menu--dropdown-mobile elementor-nav-menu--indicator-classic elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="1024fa0" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow"><ul id="menu-1-1024fa0" class="elementor-nav-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12"><a href="https://EdenKonde.github.io/aajasp/" aria-current="page" class="elementor-item elementor-item-active">Início</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-15"><a href="https://EdenKonde.github.io/aajasp/#quemsomos" aria-current="page" class="elementor-item elementor-item-anchor">Quem Somos</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16"><a href="https://EdenKonde.github.io/aajasp/#atividades" aria-current="page" class="elementor-item elementor-item-anchor">Atividades</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18"><a href="https://EdenKonde.github.io/aajasp/#contato" aria-current="page" class="elementor-item elementor-item-anchor">Contato</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="https://forms.gle/n1kJq93JU4oBzM11A" class="elementor-item">Cadastro</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-1024fa0" class="elementor-nav-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12"><a href="https://EdenKonde.github.io/aajasp/" aria-current="page" class="elementor-item elementor-item-active">Início</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-15"><a href="https://EdenKonde.github.io/aajasp/#quemsomos" aria-current="page" class="elementor-item elementor-item-anchor">Quem Somos</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16"><a href="https://EdenKonde.github.io/aajasp/#atividades" aria-current="page" class="elementor-item elementor-item-anchor">Atividades</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18"><a href="https://EdenKonde.github.io/aajasp/#contato" aria-current="page" class="elementor-item elementor-item-anchor">Contato</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175"><a href="https://forms.gle/n1kJq93JU4oBzM11A" class="elementor-item">Cadastro</a></li>
+</ul></nav>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5350380 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5350380" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/orIYnt3OLdw&quot;,&quot;background_video_end&quot;:4,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+								<div class="elementor-background-video-container">
 													<div class="elementor-background-video-embed"></div>
 												</div>
 									<div class="elementor-background-overlay"></div>
@@ -149,8 +319,8 @@ img.emoji {
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-ff9639b elementor-section-full_width elementor-section-height-min-height elementor-hidden-desktop elementor-hidden-tablet elementor-section-height-default elementor-section-items-middle" data-id="ff9639b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/orIYnt3OLdw&quot;,&quot;background_video_end&quot;:4}">
-								<div class="elementor-background-video-container elementor-hidden-phone">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ff9639b elementor-section-full_width elementor-section-height-min-height elementor-hidden-desktop elementor-hidden-tablet elementor-section-height-default elementor-section-items-middle" data-id="ff9639b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/orIYnt3OLdw&quot;,&quot;background_video_end&quot;:4,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+								<div class="elementor-background-video-container">
 													<div class="elementor-background-video-embed"></div>
 												</div>
 									<div class="elementor-background-overlay"></div>
@@ -168,18 +338,27 @@ img.emoji {
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-8a0f3ca elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8a0f3ca" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fca7291" data-id="fca7291" data-element_type="column">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c0fb3e2" data-id="c0fb3e2" data-element_type="column">
+			<div class="elementor-widget-wrap">
+									</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-393bfe4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="393bfe4" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a58318f" data-id="a58318f" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-f3892b2 elementor-widget elementor-widget-menu-anchor" data-id="f3892b2" data-element_type="widget" data-widget_type="menu-anchor.default">
+								<div class="elementor-element elementor-element-b65c625 elementor-widget elementor-widget-menu-anchor" data-id="b65c625" data-element_type="widget" data-widget_type="menu-anchor.default">
 				<div class="elementor-widget-container">
 					<div id="quemsomos" class="elementor-menu-anchor"></div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-e681660 elementor-invisible elementor-widget elementor-widget-heading" data-id="e681660" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
+				<div class="elementor-element elementor-element-723f32c elementor-invisible elementor-widget elementor-widget-heading" data-id="723f32c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Quem Somos</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-d2787c6 elementor-widget elementor-widget-text-editor" data-id="d2787c6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-4b08311 elementor-widget elementor-widget-text-editor" data-id="4b08311" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-text-editor elementor-clearfix">
 <p>AAJA-SP, fundada em 23 /12/18, é uma Associação, sem fins lucrativos, que realiza palestras e ações voltadas para as comunidades Afro-brasileira. A Associação é constituída por um número ilimitado de associados. A Associação tem por finalidade; proporcionar uma ampla integração, união, e companheirismo recíprocos entre os Estudantes, promover, participar e organizar promoções de cunho cultural e social.</p>
@@ -190,47 +369,47 @@ img.emoji {
 </div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-1683515 elementor-widget elementor-widget-menu-anchor" data-id="1683515" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-element elementor-element-0acbce6 elementor-widget elementor-widget-menu-anchor" data-id="0acbce6" data-element_type="widget" data-widget_type="menu-anchor.default">
 				<div class="elementor-widget-container">
 					<div id="atividades" class="elementor-menu-anchor"></div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-d24a164 elementor-invisible elementor-widget elementor-widget-heading" data-id="d24a164" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
+				<div class="elementor-element elementor-element-6fe3d25 elementor-invisible elementor-widget elementor-widget-heading" data-id="6fe3d25" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Atividades</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-0b10a6a elementor-widget elementor-widget-text-editor" data-id="0b10a6a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-eacde51 elementor-widget elementor-widget-text-editor" data-id="eacde51" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-text-editor elementor-clearfix"><p><strong>AAJA-SP</strong> vem realizando várias atividades socioculturais e educativas entre elas as palestras, que muitas das vezes beneficiam os Estudantes Brasileiros tanto do ensino fundamental como do Ensino Superior que procuram saber mais sobre a História e a Cultura Africana.</p></div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-dbef540 elementor-widget elementor-widget-gallery" data-id="dbef540" data-element_type="widget" data-settings="{&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns&quot;:4,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;aspect_ratio&quot;:&quot;3:2&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}" data-widget_type="gallery.default">
+				<div class="elementor-element elementor-element-d54434a elementor-widget elementor-widget-gallery" data-id="d54434a" data-element_type="widget" data-settings="{&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns&quot;:4,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;aspect_ratio&quot;:&quot;3:2&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}" data-widget_type="gallery.default">
 				<div class="elementor-widget-container">
 						<div class="elementor-gallery__titles-container e--pointer-none">
 				
 									<a data-gallery-index="0" class="elementor-item elementor-gallery-title"></a>
 								</div>
 					<div class="elementor-gallery__container">
-							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage2.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-dbef540" data-elementor-lightbox-title="WImage2">
+							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage2.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-d54434a" data-elementor-lightbox-title="WImage2">
 					<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage2.jpeg" data-width="300" data-height="200" alt=""></div>
 										<div class="elementor-gallery-item__overlay"></div>
 														</a>
-							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage4.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-dbef540" data-elementor-lightbox-title="WImage4">
+							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage4.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-d54434a" data-elementor-lightbox-title="WImage4">
 					<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage4.jpeg" data-width="300" data-height="200" alt=""></div>
 										<div class="elementor-gallery-item__overlay"></div>
 														</a>
-							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage1.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-dbef540" data-elementor-lightbox-title="WImage1">
+							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage1.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-d54434a" data-elementor-lightbox-title="WImage1">
 					<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage1.jpeg" data-width="300" data-height="200" alt=""></div>
 										<div class="elementor-gallery-item__overlay"></div>
 														</a>
-							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage0.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-dbef540" data-elementor-lightbox-title="WImage0">
+							<a class="e-gallery-item elementor-gallery-item elementor-animated-content" data-e-gallery-tags="0" href="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage0.jpeg" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-d54434a" data-elementor-lightbox-title="WImage0">
 					<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://EdenKonde.github.io/aajasp/wp-content/uploads/2021/03/WImage0.jpeg" data-width="300" data-height="203" alt=""></div>
 										<div class="elementor-gallery-item__overlay"></div>
 														</a>
 					</div>
 			</div>
 				</div>
-				<div class="elementor-element elementor-element-0fa56ea elementor-widget elementor-widget-shortcode" data-id="0fa56ea" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-element elementor-element-f552519 elementor-widget elementor-widget-shortcode" data-id="f552519" data-element_type="widget" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-shortcode">
 <div id="sb_instagram" class="sbi sbi_col_4  sbi_width_resp" style="padding-bottom: 10px;width: 100%;" data-feedid="sbi_17841440494840978#12" data-res="auto" data-cols="4" data-num="12" data-shortcode-atts="{}" data-postid="9" data-sbi-flags="favorLocal">
@@ -238,7 +417,7 @@ img.emoji {
     <div id="sbi_images" style="padding: 5px;">
 		<div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17913131626631733" data-date="1616556788">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMyVnovFMSt/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=QvI7fPFstcQAX8bzY9o&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=ef48c76e8a108d546b8899592a7f3b00&#038;oe=6086668A" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=QvI7fPFstcQAX8bzY9o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=ef48c76e8a108d546b8899592a7f3b00&amp;oe=6086668A&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=QvI7fPFstcQAX8bzY9o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=ef48c76e8a108d546b8899592a7f3b00&amp;oe=6086668A&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=QvI7fPFstcQAX8bzY9o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=ef48c76e8a108d546b8899592a7f3b00&amp;oe=6086668A&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=QvI7fPFstcQAX8bzY9o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=ef48c76e8a108d546b8899592a7f3b00&amp;oe=6086668A&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMyVnovFMSt/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=Q4FxwPtd4o8AX8doo6V&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=66626b7e48c741a2ed496ec56a582507&#038;oe=608E4F8A" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=Q4FxwPtd4o8AX8doo6V&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=66626b7e48c741a2ed496ec56a582507&amp;oe=608E4F8A&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=Q4FxwPtd4o8AX8doo6V&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=66626b7e48c741a2ed496ec56a582507&amp;oe=608E4F8A&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=Q4FxwPtd4o8AX8doo6V&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=66626b7e48c741a2ed496ec56a582507&amp;oe=608E4F8A&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/164149099_895058901272173_8379134457308908032_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=Q4FxwPtd4o8AX8doo6V&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=66626b7e48c741a2ed496ec56a582507&amp;oe=608E4F8A&quot;}">
             <span class="sbi-screenreader">A finalidade de um currículo é criar uma apresen</span>
             	                    <img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/img/placeholder.png" alt="A finalidade de um currículo é criar uma apresentação pessoal, ordenada e sintética, para se concorrer a uma vaga.
 Para que você consiga elaborar um currículo que atenda às necessidades do mercado, antes de mais nada precisa entender qual a importância de ter um currículo bem elaborado.
@@ -256,7 +435,7 @@ E é sobre esse tema que iremos abordar nesta Live, com convidadas que entendem 
 </div>
 <div class="sbi_item sbi_type_video sbi_new sbi_transition" id="sbi_17848602692531845" data-date="1615560505">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMUpViFH8II/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=fCjD-v0gcb0AX9bGAdv&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=f7fb834b1ab3ac7df1241108aba70314&#038;oe=6085A61F" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=fCjD-v0gcb0AX9bGAdv&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=f7fb834b1ab3ac7df1241108aba70314&amp;oe=6085A61F&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=fCjD-v0gcb0AX9bGAdv&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=f7fb834b1ab3ac7df1241108aba70314&amp;oe=6085A61F&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=fCjD-v0gcb0AX9bGAdv&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=f7fb834b1ab3ac7df1241108aba70314&amp;oe=6085A61F&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=fCjD-v0gcb0AX9bGAdv&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=f7fb834b1ab3ac7df1241108aba70314&amp;oe=6085A61F&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMUpViFH8II/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=9So6loWK-SgAX82s9vl&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=bcbf97a672eb12a30b90f2785067bf2a&#038;oe=608D8F1F" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=9So6loWK-SgAX82s9vl&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=bcbf97a672eb12a30b90f2785067bf2a&amp;oe=608D8F1F&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=9So6loWK-SgAX82s9vl&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=bcbf97a672eb12a30b90f2785067bf2a&amp;oe=608D8F1F&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=9So6loWK-SgAX82s9vl&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=bcbf97a672eb12a30b90f2785067bf2a&amp;oe=608D8F1F&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158962673_1354496238276655_5197982713195583531_n.jpg?_nc_cat=105&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=9So6loWK-SgAX82s9vl&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=bcbf97a672eb12a30b90f2785067bf2a&amp;oe=608D8F1F&quot;}">
             <span class="sbi-screenreader">Não podia faltar o Mete-tira😊
 Bom, foi uma pas</span>
             	        <svg style="color: rgba(255,255,255,1)" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" aria-label="Play" aria-hidden="true" data-fa-processed="" data-prefix="fa" data-icon="play" role="presentation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>            <img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Não podia faltar o Mete-tira😊
@@ -270,7 +449,7 @@ Enquanto isso vamos nos cuidar e seguir as recomendações da OMS e do governo, 
 </div>
 <div class="sbi_item sbi_type_video sbi_new sbi_transition" id="sbi_17938731274462651" data-date="1615559313">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMUnCFLnM5N/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=2cCSjJy4hk4AX9N20Up&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=dadb99cb0d7fa33fc7030a7730f6a17b&#038;oe=608789C6" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2cCSjJy4hk4AX9N20Up&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=dadb99cb0d7fa33fc7030a7730f6a17b&amp;oe=608789C6&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2cCSjJy4hk4AX9N20Up&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=dadb99cb0d7fa33fc7030a7730f6a17b&amp;oe=608789C6&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2cCSjJy4hk4AX9N20Up&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=dadb99cb0d7fa33fc7030a7730f6a17b&amp;oe=608789C6&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2cCSjJy4hk4AX9N20Up&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=dadb99cb0d7fa33fc7030a7730f6a17b&amp;oe=608789C6&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMUnCFLnM5N/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=8hLwd0BPZE8AX-BB6jT&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=81897d6f45f2cb402e30597bd21dccd3&#038;oe=608B7E46" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=8hLwd0BPZE8AX-BB6jT&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=81897d6f45f2cb402e30597bd21dccd3&amp;oe=608B7E46&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=8hLwd0BPZE8AX-BB6jT&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=81897d6f45f2cb402e30597bd21dccd3&amp;oe=608B7E46&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=8hLwd0BPZE8AX-BB6jT&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=81897d6f45f2cb402e30597bd21dccd3&amp;oe=608B7E46&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/159969284_733943520648330_5419294457663443138_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=8hLwd0BPZE8AX-BB6jT&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=81897d6f45f2cb402e30597bd21dccd3&amp;oe=608B7E46&quot;}">
             <span class="sbi-screenreader">Ainda sobre a passeata ao parque Ibirapuera no dia</span>
             	        <svg style="color: rgba(255,255,255,1)" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" aria-label="Play" aria-hidden="true" data-fa-processed="" data-prefix="fa" data-icon="play" role="presentation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>            <img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Ainda sobre a passeata ao parque Ibirapuera no dia 28/02/2021
 Jogamos o 35 🤾‍♀️🤾‍♂️🏐">
@@ -279,7 +458,7 @@ Jogamos o 35 🤾‍♀️🤾‍♂️🏐">
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_17955057580409870" data-date="1615043001">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMFOTMpHzTk/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=uuvb5ZpIBR8AX9hObzY&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=206db03ec21e75572d20055b271b44ba&#038;oe=6084FD2C" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=uuvb5ZpIBR8AX9hObzY&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=206db03ec21e75572d20055b271b44ba&amp;oe=6084FD2C&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=uuvb5ZpIBR8AX9hObzY&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=206db03ec21e75572d20055b271b44ba&amp;oe=6084FD2C&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=uuvb5ZpIBR8AX9hObzY&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=206db03ec21e75572d20055b271b44ba&amp;oe=6084FD2C&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=uuvb5ZpIBR8AX9hObzY&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=206db03ec21e75572d20055b271b44ba&amp;oe=6084FD2C&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMFOTMpHzTk/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=7zp0_m32Yb4AX8neTX8&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=cef0396a86ea8c1d02d6592602d3d0db&#038;oe=608CE62C" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=7zp0_m32Yb4AX8neTX8&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=cef0396a86ea8c1d02d6592602d3d0db&amp;oe=608CE62C&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=7zp0_m32Yb4AX8neTX8&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=cef0396a86ea8c1d02d6592602d3d0db&amp;oe=608CE62C&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=7zp0_m32Yb4AX8neTX8&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=cef0396a86ea8c1d02d6592602d3d0db&amp;oe=608CE62C&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156868824_2806928242957327_8323197942743466106_n.jpg?_nc_cat=107&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=7zp0_m32Yb4AX8neTX8&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=cef0396a86ea8c1d02d6592602d3d0db&amp;oe=608CE62C&quot;}">
             <span class="sbi-screenreader">A Associação dos Estudantes Angolanos em São Pa</span>
             <svg class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon" aria-hidden="true" aria-label="Clone" data-fa-pro data-prefix="far" data-icon="clone" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
 	                <path fill="currentColor" d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path>
@@ -292,7 +471,7 @@ Nesta passeata tinham foi uma união de Angola, Brasil Cabo Verde e Togo.
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_17856928376509419" data-date="1615042399">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMFNJrhn6XP/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=YSAShVcJ53oAX-AuSYX&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=51a1a6d40fec9da678b02726a1d035eb&#038;oe=6086755E" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=YSAShVcJ53oAX-AuSYX&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=51a1a6d40fec9da678b02726a1d035eb&amp;oe=6086755E&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=YSAShVcJ53oAX-AuSYX&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=51a1a6d40fec9da678b02726a1d035eb&amp;oe=6086755E&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=YSAShVcJ53oAX-AuSYX&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=51a1a6d40fec9da678b02726a1d035eb&amp;oe=6086755E&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=YSAShVcJ53oAX-AuSYX&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=51a1a6d40fec9da678b02726a1d035eb&amp;oe=6086755E&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMFNJrhn6XP/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=4gZRgpXzvDAAX-2LUoa&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=85aba588da16ee7a3d2f7924cbd24915&#038;oe=608E5E5E" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=4gZRgpXzvDAAX-2LUoa&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=85aba588da16ee7a3d2f7924cbd24915&amp;oe=608E5E5E&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=4gZRgpXzvDAAX-2LUoa&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=85aba588da16ee7a3d2f7924cbd24915&amp;oe=608E5E5E&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=4gZRgpXzvDAAX-2LUoa&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=85aba588da16ee7a3d2f7924cbd24915&amp;oe=608E5E5E&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156803652_3803369989743161_6365654306666440819_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=4gZRgpXzvDAAX-2LUoa&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=85aba588da16ee7a3d2f7924cbd24915&amp;oe=608E5E5E&quot;}">
             <span class="sbi-screenreader">A Associação dos Estudantes Angolanos em São Pa</span>
             <svg class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon" aria-hidden="true" aria-label="Clone" data-fa-pro data-prefix="far" data-icon="clone" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
 	                <path fill="currentColor" d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path>
@@ -305,7 +484,7 @@ Nesta passeata tinham foi uma união de Angola, Brasil Cabo Verde e Togo.
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_17913196114624345" data-date="1615041813">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMFMCKjHuCQ/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=6CcnY-JZtHsAX_1MC0N&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=1647cb060eeaab7762e7eddc26fa3be0&#038;oe=6087517A" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=6CcnY-JZtHsAX_1MC0N&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=1647cb060eeaab7762e7eddc26fa3be0&amp;oe=6087517A&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=6CcnY-JZtHsAX_1MC0N&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=1647cb060eeaab7762e7eddc26fa3be0&amp;oe=6087517A&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=6CcnY-JZtHsAX_1MC0N&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=1647cb060eeaab7762e7eddc26fa3be0&amp;oe=6087517A&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=6CcnY-JZtHsAX_1MC0N&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=1647cb060eeaab7762e7eddc26fa3be0&amp;oe=6087517A&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMFMCKjHuCQ/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=HxVhrLaM39IAX8uBQ6d&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=2f840344437a14022fd8b36dfba8d3a9&#038;oe=608B45FA" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=HxVhrLaM39IAX8uBQ6d&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2f840344437a14022fd8b36dfba8d3a9&amp;oe=608B45FA&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=HxVhrLaM39IAX8uBQ6d&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2f840344437a14022fd8b36dfba8d3a9&amp;oe=608B45FA&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=HxVhrLaM39IAX8uBQ6d&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2f840344437a14022fd8b36dfba8d3a9&amp;oe=608B45FA&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/158448037_3850080981718969_5645648227425997229_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=HxVhrLaM39IAX8uBQ6d&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2f840344437a14022fd8b36dfba8d3a9&amp;oe=608B45FA&quot;}">
             <span class="sbi-screenreader">A Associação dos Estudantes Angolanos em São Pa</span>
             <svg class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon" aria-hidden="true" aria-label="Clone" data-fa-pro data-prefix="far" data-icon="clone" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
 	                <path fill="currentColor" d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path>
@@ -316,7 +495,7 @@ Nesta passeata tinham foi uma união de Angola, Brasil Cabo Verde e Togo.">
 </div>
 <div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17953577383416513" data-date="1615037326">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CMFDebUH_8U/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=kDjsJAxX_2wAX8iMk4E&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=65a5f7c407d9683e94f9bc82cceed18e&#038;oe=6086C8B6" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=kDjsJAxX_2wAX8iMk4E&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=65a5f7c407d9683e94f9bc82cceed18e&amp;oe=6086C8B6&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=kDjsJAxX_2wAX8iMk4E&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=65a5f7c407d9683e94f9bc82cceed18e&amp;oe=6086C8B6&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=kDjsJAxX_2wAX8iMk4E&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=65a5f7c407d9683e94f9bc82cceed18e&amp;oe=6086C8B6&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=kDjsJAxX_2wAX8iMk4E&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=65a5f7c407d9683e94f9bc82cceed18e&amp;oe=6086C8B6&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMFDebUH_8U/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=irKuDUXfZokAX-V8ydR&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=c0f3b8861d01dc6e185dbd458a9827e0&#038;oe=608EB1B6" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=irKuDUXfZokAX-V8ydR&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=c0f3b8861d01dc6e185dbd458a9827e0&amp;oe=608EB1B6&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=irKuDUXfZokAX-V8ydR&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=c0f3b8861d01dc6e185dbd458a9827e0&amp;oe=608EB1B6&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=irKuDUXfZokAX-V8ydR&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=c0f3b8861d01dc6e185dbd458a9827e0&amp;oe=608EB1B6&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/156900169_180927980239670_5973372133211247133_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=irKuDUXfZokAX-V8ydR&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=c0f3b8861d01dc6e185dbd458a9827e0&amp;oe=608EB1B6&quot;}">
             <span class="sbi-screenreader">Passeata acadêmica 28/02</span>
             	                    <img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Passeata acadêmica 28/02">
         </a>
@@ -324,7 +503,7 @@ Nesta passeata tinham foi uma união de Angola, Brasil Cabo Verde e Togo.">
 </div>
 <div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_18095430775234315" data-date="1614110669">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CLpcBGYHhZF/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=dsl7mx-2TtUAX9MDL8o&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=a4b4da50b957f0bc766ed9d5537958b3&#038;oe=60871754" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=dsl7mx-2TtUAX9MDL8o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=a4b4da50b957f0bc766ed9d5537958b3&amp;oe=60871754&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=dsl7mx-2TtUAX9MDL8o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=a4b4da50b957f0bc766ed9d5537958b3&amp;oe=60871754&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=dsl7mx-2TtUAX9MDL8o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=a4b4da50b957f0bc766ed9d5537958b3&amp;oe=60871754&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=dsl7mx-2TtUAX9MDL8o&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=a4b4da50b957f0bc766ed9d5537958b3&amp;oe=60871754&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CLpcBGYHhZF/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=nr8vJ9ZhIngAX-4A_4B&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=2cb70f03fed7a8c8b12be0b8e9926b0d&#038;oe=608F0054" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=nr8vJ9ZhIngAX-4A_4B&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2cb70f03fed7a8c8b12be0b8e9926b0d&amp;oe=608F0054&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=nr8vJ9ZhIngAX-4A_4B&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2cb70f03fed7a8c8b12be0b8e9926b0d&amp;oe=608F0054&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=nr8vJ9ZhIngAX-4A_4B&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2cb70f03fed7a8c8b12be0b8e9926b0d&amp;oe=608F0054&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/152839110_1327708534266009_2853279160876168836_n.jpg?_nc_cat=110&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=nr8vJ9ZhIngAX-4A_4B&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=2cb70f03fed7a8c8b12be0b8e9926b0d&amp;oe=608F0054&quot;}">
             <span class="sbi-screenreader">Caros estudantes associados ✨
 
 A Associação do</span>
@@ -343,7 +522,7 @@ A presença de todos é muito especial ❤️
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_17855964668479703" data-date="1610239494">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CJ2EVgqsTk6/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=5MA4TUa8zNMAX-Dx0L-&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=13208a41e33edf930bd717f46a1ae4f8&#038;oe=6085181B" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=5MA4TUa8zNMAX-Dx0L-&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=13208a41e33edf930bd717f46a1ae4f8&amp;oe=6085181B&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=5MA4TUa8zNMAX-Dx0L-&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=13208a41e33edf930bd717f46a1ae4f8&amp;oe=6085181B&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=5MA4TUa8zNMAX-Dx0L-&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=13208a41e33edf930bd717f46a1ae4f8&amp;oe=6085181B&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=5MA4TUa8zNMAX-Dx0L-&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=13208a41e33edf930bd717f46a1ae4f8&amp;oe=6085181B&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CJ2EVgqsTk6/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=ZbHVkNwIJ0AAX8asszA&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=82864ccfbc4135bddcc72c917bd4b792&#038;oe=608D011B" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ZbHVkNwIJ0AAX8asszA&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=82864ccfbc4135bddcc72c917bd4b792&amp;oe=608D011B&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ZbHVkNwIJ0AAX8asszA&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=82864ccfbc4135bddcc72c917bd4b792&amp;oe=608D011B&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ZbHVkNwIJ0AAX8asszA&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=82864ccfbc4135bddcc72c917bd4b792&amp;oe=608D011B&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/136980771_904730683667109_7055407100855457268_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ZbHVkNwIJ0AAX8asszA&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=82864ccfbc4135bddcc72c917bd4b792&amp;oe=608D011B&quot;}">
             <span class="sbi-screenreader">Mesa redonda!
 Jovens trocando ideias, planos, opin</span>
             <svg class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon" aria-hidden="true" aria-label="Clone" data-fa-pro data-prefix="far" data-icon="clone" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
@@ -362,7 +541,7 @@ Associação dos Estudantes Angolanos em São Paulo.">
 </div>
 <div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_18125951404147956" data-date="1607716017">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CIq3L8pHEh5/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=IMh3Xh_7bi0AX-EKjGs&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=5d719a980dfcf8c752f6be5b97f1a6b1&#038;oe=60846869" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=IMh3Xh_7bi0AX-EKjGs&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=5d719a980dfcf8c752f6be5b97f1a6b1&amp;oe=60846869&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=IMh3Xh_7bi0AX-EKjGs&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=5d719a980dfcf8c752f6be5b97f1a6b1&amp;oe=60846869&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=IMh3Xh_7bi0AX-EKjGs&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=5d719a980dfcf8c752f6be5b97f1a6b1&amp;oe=60846869&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=IMh3Xh_7bi0AX-EKjGs&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=5d719a980dfcf8c752f6be5b97f1a6b1&amp;oe=60846869&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CIq3L8pHEh5/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=2X0iNwxRkQ4AX8fU1aQ&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=57e38287cab0413195d635b7b37652b5&#038;oe=608C5169" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2X0iNwxRkQ4AX8fU1aQ&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=57e38287cab0413195d635b7b37652b5&amp;oe=608C5169&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2X0iNwxRkQ4AX8fU1aQ&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=57e38287cab0413195d635b7b37652b5&amp;oe=608C5169&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2X0iNwxRkQ4AX8fU1aQ&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=57e38287cab0413195d635b7b37652b5&amp;oe=608C5169&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130086892_201587891557189_5728240506274453442_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2X0iNwxRkQ4AX8fU1aQ&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=57e38287cab0413195d635b7b37652b5&amp;oe=608C5169&quot;}">
             <span class="sbi-screenreader">Com a força e dinamismo dos jovem, a Associação</span>
             	                    <img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Com a força e dinamismo dos jovem, a Associação dos Estudantes Angolanos em São Paulo, irá comemorar no dia 23 de Dezembro às 18h30 de forma remota, o 2° aniversário da nossa Associação. A AEASP surgiu do fruto de um sonho ambicioso de se ter na sociedade Brasileira uma entidade capaz de representar os interesses estudantis, culturais, econômicos, sociais e políticos dos estudantes Angolanos em São Paulo. 
 O surgimento da AEASP está fortemente identificado com o desenvolvimento do município. E é com grande honra e mérito que viemos te convidar para comemorar e celebrar com a gente mais um aniversário (ao vivo pelo Facebook da Associação).
@@ -373,7 +552,7 @@ A nossa associação dos estudantes é jovem, mas já tem muitas realizações. 
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_17895156277686764" data-date="1607211838">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CIb1imVH2Vt/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=tBweDIdefn0AX_-NXnw&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=aecac4d95540c8a219b7fcb14bf4a324&#038;oe=608543E5" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=tBweDIdefn0AX_-NXnw&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=aecac4d95540c8a219b7fcb14bf4a324&amp;oe=608543E5&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=tBweDIdefn0AX_-NXnw&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=aecac4d95540c8a219b7fcb14bf4a324&amp;oe=608543E5&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=tBweDIdefn0AX_-NXnw&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=aecac4d95540c8a219b7fcb14bf4a324&amp;oe=608543E5&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=tBweDIdefn0AX_-NXnw&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=aecac4d95540c8a219b7fcb14bf4a324&amp;oe=608543E5&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CIb1imVH2Vt/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=SzC8pHvnYVYAX8Y-KM2&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=253fa43c2746a8377acc1e358a0a74c7&#038;oe=608D2CE5" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=SzC8pHvnYVYAX8Y-KM2&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=253fa43c2746a8377acc1e358a0a74c7&amp;oe=608D2CE5&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=SzC8pHvnYVYAX8Y-KM2&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=253fa43c2746a8377acc1e358a0a74c7&amp;oe=608D2CE5&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=SzC8pHvnYVYAX8Y-KM2&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=253fa43c2746a8377acc1e358a0a74c7&amp;oe=608D2CE5&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/130137116_675986976405862_8228002269768170481_n.jpg?_nc_cat=111&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=SzC8pHvnYVYAX8Y-KM2&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=253fa43c2746a8377acc1e358a0a74c7&amp;oe=608D2CE5&quot;}">
             <span class="sbi-screenreader">Hoje  05 de Dezembro recebemos da Anneli Nobre (Re</span>
             <svg class="svg-inline--fa fa-clone fa-w-16 sbi_lightbox_carousel_icon" aria-hidden="true" aria-label="Clone" data-fa-pro data-prefix="far" data-icon="clone" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
 	                <path fill="currentColor" d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path>
@@ -389,7 +568,7 @@ Bem Haja.">
 </div>
 <div class="sbi_item sbi_type_carousel sbi_new sbi_transition" id="sbi_18016928914290372" data-date="1604544980">
     <div class="sbi_photo_wrap">
-        <a class="sbi_photo" href="https://www.instagram.com/p/CHMW6epHeWR/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=XVNdMMW7lTEAX_AEj8y&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=d64d571182ef8b19d6c02ac940873931&#038;oe=6085BA33" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=XVNdMMW7lTEAX_AEj8y&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=d64d571182ef8b19d6c02ac940873931&amp;oe=6085BA33&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=XVNdMMW7lTEAX_AEj8y&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=d64d571182ef8b19d6c02ac940873931&amp;oe=6085BA33&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=XVNdMMW7lTEAX_AEj8y&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=d64d571182ef8b19d6c02ac940873931&amp;oe=6085BA33&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=XVNdMMW7lTEAX_AEj8y&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=d64d571182ef8b19d6c02ac940873931&amp;oe=6085BA33&quot;}">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CHMW6epHeWR/" target="_blank" rel="noopener nofollow" data-full-res="https://scontent.cdninstagram.com/v/t51.29350-15/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=90hEiuyjnO0AX-BFbiK&#038;_nc_ht=scontent.cdninstagram.com&#038;oh=69d50c84034ece2c665a28b53d0c24f9&#038;oe=608DA333" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=90hEiuyjnO0AX-BFbiK&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=69d50c84034ece2c665a28b53d0c24f9&amp;oe=608DA333&quot;,&quot;150&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=90hEiuyjnO0AX-BFbiK&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=69d50c84034ece2c665a28b53d0c24f9&amp;oe=608DA333&quot;,&quot;320&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=90hEiuyjnO0AX-BFbiK&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=69d50c84034ece2c665a28b53d0c24f9&amp;oe=608DA333&quot;,&quot;640&quot;:&quot;https:\/\/scontent.cdninstagram.com\/v\/t51.29350-15\/123942207_191634345803973_1375403612942481652_n.jpg?_nc_cat=102&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=90hEiuyjnO0AX-BFbiK&amp;_nc_ht=scontent.cdninstagram.com&amp;oh=69d50c84034ece2c665a28b53d0c24f9&amp;oe=608DA333&quot;}">
             <span class="sbi-screenreader">Saudações 
 Caros (a), 
 
@@ -431,20 +610,20 @@ Vilma Sampaio">
 </div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-9fe2a6b elementor-widget elementor-widget-menu-anchor" data-id="9fe2a6b" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-element elementor-element-939aa16 elementor-widget elementor-widget-menu-anchor" data-id="939aa16" data-element_type="widget" data-widget_type="menu-anchor.default">
 				<div class="elementor-widget-container">
 					<div id="contato" class="elementor-menu-anchor"></div>
 				</div>
 				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-51633ef elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="51633ef" data-element_type="section">
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-331470a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="331470a" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-f64997b" data-id="f64997b" data-element_type="column">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-33c7c92" data-id="33c7c92" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-60b8d9c elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="60b8d9c" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+								<div class="elementor-element elementor-element-ba74417 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="ba74417" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
 				<div class="elementor-widget-container">
 					<form class="elementor-form" method="post" name="New Form">
 			<input type="hidden" name="post_id" value="9">
-			<input type="hidden" name="form_id" value="60b8d9c">
+			<input type="hidden" name="form_id" value="ba74417">
 
 							<input type="hidden" name="queried_id" value="9">
 			
@@ -470,15 +649,49 @@ Vilma Sampaio">
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-26e9390" data-id="26e9390" data-element_type="column">
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-460f1d9" data-id="460f1d9" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-abd9f83 elementor-invisible elementor-widget elementor-widget-heading" data-id="abd9f83" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
+								<div class="elementor-element elementor-element-514b595 elementor-invisible elementor-widget elementor-widget-heading" data-id="514b595" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Contato</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-43ac943 elementor-widget elementor-widget-text-editor" data-id="43ac943" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-051ed22 elementor-widget elementor-widget-text-editor" data-id="051ed22" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-text-editor elementor-clearfix"><p><a href="tel:(11)959281374">(11) 959281374</a>  | <a href="tel:(11) 958355874">(11) 958355874</a></p></div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6df1c9b elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6df1c9b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b887c03" data-id="b887c03" data-element_type="column">
+			<div class="elementor-widget-wrap">
+									</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c41fc62" data-id="c41fc62" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-bd607c7 elementor-widget elementor-widget-shortcode" data-id="bd607c7" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode"><div class="sfsi_plus_widget">
+<div id="sfsi_plus_wDiv"></div>
+<div class="sfsiplus_norm_row sfsi_plus_wDiv" style="width:175px;position:absolute;;text-align:left">
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://follow.it/now" style="opacity:1"><img alt="Email" title="Email" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_email.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_email" data-effect=""></a></div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt">
+<a class=" sficn" data-effect="" target="_blank" href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" style="opacity:1"><img alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_fb.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_facebook" data-effect=""></a><div class="sfsi_plus_tool_tip_2 sfsi_plus_fb_tool_bdr sfsi_plus_Tlleft sfsiplusid_facebook" style="display:block;width:62px;opacity:0;z-index:-1;">
+<span class="bot_arow bot_fb_arow"></span><div class="sfsi_plus_inside">
+<div class="icon1"><a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" target="_blank"><img class="sfsi_plus_wicon" alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/visit_icons/Visit_us_fb/icon_Visit_us_en_US.png"></a></div>
+<div class="icon3"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FEdenKonde.github.io%2Faajasp" style="display:inline-block;"> <img class="sfsi_wicon" data-pin-nopin="true" width="auto" height="auto" alt="fb-share-icon" title="Facebook Share" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/share_icons/fb_icons/pt_BR.svg"></a></div>
+</div>
+</div>
+</div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://www.instagram.com/feiraafrobrasileira/" style="opacity:1"><img alt="Instagram" title="Instagram" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_instagram.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_instagram" data-effect=""></a></div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://api.whatsapp.com/send?text=https://EdenKonde.github.io/aajasp/" style="opacity:1"><img alt="" title="" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_whatsapp.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_whatsapp" data-effect=""></a></div></div>
+</div>
+<div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div>
+<script>window.addEventListener('sfsi_plus_functions_loaded',function( totwith=0 ) { sfsi_plus_float_widget('bottom')});</script><div style="clear: both;"></div>
+</div></div>
 				</div>
 				</div>
 					</div>
@@ -537,11 +750,82 @@ Vilma Sampaio">
 
 
 
-<!-- Instagram Feed JS -->
+		<!--facebook like and share js -->
+		<div id="fb-root"></div>
+
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+	<div class="sfsi_plus_outr_div"> <div class="sfsi_plus_FrntInner" style="background-color:#292929;border:1px solid#f3faf2; font-style:;color:#f5f500;box-shadow:12px 30px 18px #CCCCCC;">
+<div class="sfsiclpupwpr" onclick="sfsiplushidemepopup();"><img src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/close.png"></div>
+<h2 style="font-family:Helvetica,Arial,sans-serif;font-style:;color:#f5f500;font-size:30px">AAJA-SP</h2>
+<ul style="margin-bottom:0px">
+<li><div style="width:51px; height:51px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://follow.it/now" style="opacity:1"><img alt="Email" title="Email" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_email.png" width="51" height="51" class="sfcm sfsi_wicon sfsiplusid_round_icon_email" data-effect=""></a></div></div></li>
+<li><div style="width:51px; height:51px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt">
+<a class=" sficn" data-effect="" target="_blank" href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" style="opacity:1"><img alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_fb.png" width="51" height="51" class="sfcm sfsi_wicon sfsiplusid_round_icon_facebook" data-effect=""></a><div class="sfsi_plus_tool_tip_2 sfsi_plus_fb_tool_bdr sfsi_plus_Tlleft sfsiplusid_facebook" style="display:block;width:62px;opacity:0;z-index:-1;">
+<span class="bot_arow bot_fb_arow"></span><div class="sfsi_plus_inside">
+<div class="icon1"><a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" target="_blank"><img class="sfsi_plus_wicon" alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/visit_icons/Visit_us_fb/icon_Visit_us_en_US.png"></a></div>
+<div class="icon3"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FEdenKonde.github.io%2Faajasp" style="display:inline-block;"> <img class="sfsi_wicon" data-pin-nopin="true" width="auto" height="auto" alt="fb-share-icon" title="Facebook Share" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/share_icons/fb_icons/pt_BR.svg"></a></div>
+</div>
+</div>
+</div></div></li>
+<li><div style="width:51px; height:51px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://www.instagram.com/feiraafrobrasileira/" style="opacity:1"><img alt="Instagram" title="Instagram" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_instagram.png" width="51" height="51" class="sfcm sfsi_wicon sfsiplusid_round_icon_instagram" data-effect=""></a></div></div></li>
+<li><div style="width:51px; height:51px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://api.whatsapp.com/send?text=https://EdenKonde.github.io/aajasp/" style="opacity:1"><img alt="" title="" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_whatsapp.png" width="51" height="51" class="sfcm sfsi_wicon sfsiplusid_round_icon_whatsapp" data-effect=""></a></div></div></li>
+</ul>
+</div>
+</div>
+<script>
+
+</script>
+<script>
+	window.addEventListener('sfsi_plus_functions_loaded', function() {
+		if (typeof sfsi_plus_time_pop_up == 'function') {
+			sfsi_plus_time_pop_up(3000000);
+
+		}
+	})
+</script>
+		<script>
+			window.addEventListener('sfsi_plus_functions_loaded', function() {
+				if (typeof sfsi_plus_widget_set == 'function') {
+					sfsi_plus_widget_set();
+				}
+			})
+		</script>
+		<div class="sfsiplus_norm_row sfsi_plus_wDiv" id="sfsi_plus_floater" style="z-index: 9999;width:175px;text-align:left;position:absolute;position:absolute;right:30px;bottom:0px">
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://follow.it/now" style="opacity:1"><img alt="Email" title="Email" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_email.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_email" data-effect=""></a></div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt">
+<a class=" sficn" data-effect="" target="_blank" href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" style="opacity:1"><img alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_fb.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_facebook" data-effect=""></a><div class="sfsi_plus_tool_tip_2 sfsi_plus_fb_tool_bdr sfsi_plus_Tlleft sfsiplusid_facebook" style="display:block;width:62px;opacity:0;z-index:-1;">
+<span class="bot_arow bot_fb_arow"></span><div class="sfsi_plus_inside">
+<div class="icon1"><a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-dos-Estudantes-Angolanos-em-S%C3%A3o-Paulo-Brasil-224788111734778" target="_blank"><img class="sfsi_plus_wicon" alt="Facebook" title="Facebook" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/visit_icons/Visit_us_fb/icon_Visit_us_en_US.png"></a></div>
+<div class="icon3"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FEdenKonde.github.io%2Faajasp" style="display:inline-block;"> <img class="sfsi_wicon" data-pin-nopin="true" width="auto" height="auto" alt="fb-share-icon" title="Facebook Share" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/share_icons/fb_icons/pt_BR.svg"></a></div>
+</div>
+</div>
+</div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://www.instagram.com/feiraafrobrasileira/" style="opacity:1"><img alt="Instagram" title="Instagram" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_instagram.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_instagram" data-effect=""></a></div></div>
+<div style="width:30px; height:30px;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect="" target="_blank" href="https://api.whatsapp.com/send?text=https://EdenKonde.github.io/aajasp/" style="opacity:1"><img alt="" title="" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_whatsapp.png" width="30" height="30" class="sfcm sfsi_wicon sfsiplusid_round_icon_whatsapp" data-effect=""></a></div></div>
+</div>
+<input type="hidden" id="sfsi_plus_floater_sec" value="bottom-right"><script>window.addEventListener('sfsi_plus_functions_loaded',function( totwith=0 ) { sfsi_plus_float_widget('bottom')});</script><!-- Instagram Feed JS -->
 <script type="text/javascript">
 var sbiajaxurl = "https://EdenKonde.github.io/aajasp/wp-admin/admin-ajax.php";
 </script>
 <link rel="stylesheet" id="elementor-gallery-css" href="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.min.css?ver=1.2.0" type="text/css" media="all">
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/js/shuffle/modernizr.custom.min.js?ver=5.7" id="SFSIPLUSjqueryModernizr-js"></script>
+<script type="text/javascript" id="SFSIPLUSCustomJs-js-extra">
+/* <![CDATA[ */
+var sfsi_plus_ajax_object = {"ajax_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/ultimate-social-media-plus\/","rest_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-json\/"};
+var sfsi_plus_links = {"admin_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-admin\/","plugin_dir_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/ultimate-social-media-plus\/","rest_url":"https:\/\/EdenKonde.github.io\/aajasp\/wp-json\/","pretty_perma":"yes"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/ultimate-social-media-plus/js/custom.js?ver=5.7" id="SFSIPLUSCustomJs-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.0.0" id="magnific-popup-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.0.0" id="oceanwp-lightbox-js"></script>
@@ -568,19 +852,29 @@ var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/Eden
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.1.4" id="elementor-frontend-modules-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.1.1" id="elementor-sticky-js"></script>
 <script type="text/javascript" id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/EdenKonde.github.io\/aajasp\/wp-admin\/admin-ajax.php","nonce":"4cf217ce58","urls":{"assets":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/EdenKonde.github.io\/aajasp\/wp-admin\/admin-ajax.php","nonce":"ef166daab1","urls":{"assets":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
 </script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.1.1" id="elementor-pro-frontend-js"></script>
-<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.1.4" id="share-link-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
 <script type="text/javascript" id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir vídeo","previous":"Anterior","next":"Próximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":9,"title":"Associa%C3%A7%C3%A3o%20Acad%C3%AAmica%20Juvenil%20Angolana%20de%20S%C3%A3o%20Paulo%20%E2%80%93%20S%C3%B3%20mais%20um%20site%20WordPress","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir vídeo","previous":"Anterior","next":"Próximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":"https:\/\/EdenKonde.github.io\/aajasp\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":9,"title":"Associa%C3%A7%C3%A3o%20Acad%C3%AAmica%20Juvenil%20Angolana%20de%20S%C3%A3o%20Paulo","excerpt":"","featuredImage":false}};
 </script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.1.4" id="elementor-frontend-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.1.1" id="pro-preloaded-elements-handlers-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-content/plugins/elementor/assets/js/preloaded-elements-handlers.min.js?ver=3.1.4" id="preloaded-elements-handlers-js"></script>
+<script>var css = "#sfsi_plus_floater { margin-bottom:0px;margin-right:0px; }",
+				    head = document.head || document.getElementsByTagName("head")[0],
+				    style = document.createElement("style");
+
+				head.appendChild(style);
+				if (style.styleSheet){
+				  // This is required for IE8 and below.
+				  style.styleSheet.cssText = css;
+				} else {
+				  style.appendChild(document.createTextNode(css));
+				}</script>
 </body>
 </html>
