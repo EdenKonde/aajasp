@@ -5,11 +5,11 @@
 	<title>Acessar &lsaquo; Associação Acadêmica Juvenil Angolana de São Paulo &#8212; WordPress</title>
 	<meta name="robots" content="max-image-preview:large, noindex, noarchive">
 <link rel="dns-prefetch" href="//s.w.org">
-<link rel="stylesheet" id="dashicons-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/dashicons.min.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="buttons-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/buttons.min.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="forms-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/forms.min.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="l10n-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/l10n.min.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="login-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/login.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/dashicons.min.css?ver=5.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="buttons-css" href="https://EdenKonde.github.io/aajasp/wp-includes/css/buttons.min.css?ver=5.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="forms-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/forms.min.css?ver=5.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="l10n-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/l10n.min.css?ver=5.7.1" type="text/css" media="all">
+<link rel="stylesheet" id="login-css" href="https://EdenKonde.github.io/aajasp/wp-admin/css/login.min.css?ver=5.7.1" type="text/css" media="all">
 	<meta name="referrer" content="strict-origin-when-cross-origin">
 		<meta name="viewport" content="width=device-width">
 		</head>
@@ -82,17 +82,17 @@ var pwsL10n = {"unknown":"Nível de segurança da senha desconhecido","short":"M
 	wp.i18n.setLocaleData( localeData, domain );
 } )( "default", {"translation-revision-date":"2021-03-08 12:37:36+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"pt_BR"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s está obsoleta desde a versão %2$s. Use %3$s como alternativa. Considere escrever um código mais inclusivo."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );
 </script>
-<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-admin/js/password-strength-meter.min.js?ver=5.7" id="password-strength-meter-js"></script>
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-admin/js/password-strength-meter.min.js?ver=5.7.1" id="password-strength-meter-js"></script>
 <script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/underscore.min.js?ver=1.8.3" id="underscore-js"></script>
 <script type="text/javascript" id="wp-util-js-extra">
 /* <![CDATA[ */
 var _wpUtilSettings = {"ajax":{"url":"\/wordpress\/wp-admin\/admin-ajax.php"}};
 /* ]]> */
 </script>
-<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/wp-util.min.js?ver=5.7" id="wp-util-js"></script>
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-includes/js/wp-util.min.js?ver=5.7.1" id="wp-util-js"></script>
 <script type="text/javascript" id="user-profile-js-extra">
 /* <![CDATA[ */
-var userProfileL10n = {"user_id":"0","nonce":"d0b6a33ee1"};
+var userProfileL10n = {"user_id":"0","nonce":"9b60f702ee"};
 /* ]]> */
 </script>
 <script type="text/javascript" id="user-profile-js-translations">
@@ -102,7 +102,7 @@ var userProfileL10n = {"user_id":"0","nonce":"d0b6a33ee1"};
 	wp.i18n.setLocaleData( localeData, domain );
 } )( "default", {"translation-revision-date":"2021-03-08 12:37:36+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"pt_BR"},"Your new password has not been saved.":["Sua nova senha não foi salva."],"Hide":["Esconder"],"Show":["Mostrar"],"Confirm use of weak password":["Confirmar o uso de uma senha fraca"],"Hide password":["Ocultar senha"],"Show password":["Mostrar senha"]}},"comment":{"reference":"wp-admin\/js\/user-profile.js"}} );
 </script>
-<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-admin/js/user-profile.min.js?ver=5.7" id="user-profile-js"></script>
+<script type="text/javascript" src="https://EdenKonde.github.io/aajasp/wp-admin/js/user-profile.min.js?ver=5.7.1" id="user-profile-js"></script>
 	<div class="clear"></div>
 	</body>
 	</html>
